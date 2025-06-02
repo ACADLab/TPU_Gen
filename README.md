@@ -1,6 +1,6 @@
 # TPU-Gen: LLM-Driven Custom Tensor Processing Unit Generator
 
-#Accepted at ICLAD 2025
+Accepted at ICLAD 2025
 
 This repository hosts the official implementation, dataset, and experimental results for our paper:
 
