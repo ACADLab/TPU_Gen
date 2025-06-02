@@ -5,7 +5,7 @@
 This repository hosts the official implementation, dataset, and experimental results for our paper:
 
 "TPU-Gen: LLM-Driven Custom Tensor Processing Unit Generator" 
-Authored by Kartik Pandit, Deepak Vungarala, Mohammed Elbtity, Shaahin Angizi, Ramtin Zand, and collaborators.
+Authored by, Deepak Vungarala, Mohammed Elbtity, Kartik Pandit, Shaahin Angizi, Ramtin Zand, Arnob Ghosh, and collaborators.
 
 
 
