@@ -117,7 +117,7 @@ If you use TPU-Gen in your research, please cite the following paper:
 
 > **TPU-Gen: LLM-Driven Custom Tensor Processing Unit Generator**  
 > Deepak Vungarala, Mohammed Elbtity, Kartik Pandit, Sumiya Syed, Sakila Alam, Arnob Ghosh, Ramtin Zand, Shaahin Angizi  
-> *International Conference on Learning and Design Automation (ICLAD), 2025*
+> *International Conference on LLM-Aided Design (ICLAD), 2025*
 
 📄 [Read on arXiv](https://arxiv.org/abs/2503.05951)
 
