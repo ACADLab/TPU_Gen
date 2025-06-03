@@ -182,7 +182,7 @@ This prompt format ensures that the model receives all necessary context for cod
 
 ---
 
-### 🧠 Step 5: Train the Model (Optional)
+### 🧠 Step 5: Train the Model 
 
 You can fine-tune one of our supported LLMs (e.g., CodeLlama-7B, CodeQwen1.5-7B, StarCoder2-7B) on our curated dataset.
 
