@@ -24,5 +24,6 @@ It consists of:
 4. Automated design validation and PPA reporting.
 
 Framework:
+
 <img width="712" alt="Framework" src="https://github.com/user-attachments/assets/b357482f-a1f4-4af8-96b1-ea663593c258" />
 
