@@ -129,15 +129,12 @@ If you use TPU-Gen in your research, please cite the following paper:
   year      = {2025},
   url       = {https://arxiv.org/abs/2503.05951}
 }
+```
 
-
----
-
-## 🚀 Experiment Workflow
+### 🚀 Experiment Workflow
 
 This section provides a **step-by-step guide** to run the full TPU-Gen pipeline, from environment setup to Verilog generation and validation.
 
----
 
 ### 🔁 Step 1: Clone the Repository
 
@@ -147,8 +144,6 @@ Start by cloning the repository to your local machine:
 git clone https://github.com/ACADLab/TPU_Gen.git
 cd TPU_Gen
 ```
-
----
 
 ### 🐍 Step 2: Create and Activate Conda Environment
 
