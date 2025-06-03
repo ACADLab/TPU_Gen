@@ -101,3 +101,12 @@ TPU-Gen is the **first open-source framework** to enable:
 
 This positions TPU-Gen as a critical tool for hardware researchers, ML system designers, and EDA practitioners aiming to rapidly prototype and benchmark new accelerator designs.
 
+## 📄 Paper Access
+
+📝 This work was accepted at **ICLAD 2025**. You can read the full paper here:
+
+📥 [Download PDF](https://arxiv.org/pdf/2503.05951)
+
+or
+
+🔗 [View on ICLAD Conference Website](https://iclad.ai/accepted-papers)
