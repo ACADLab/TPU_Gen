@@ -130,3 +130,143 @@ If you use TPU-Gen in your research, please cite the following paper:
   url       = {https://arxiv.org/abs/2503.05951}
 }
 
+
+---
+
+## 🚀 Experiment Workflow
+
+This section provides a **step-by-step guide** to run the full TPU-Gen pipeline, from environment setup to Verilog generation and validation.
+
+---
+
+### 🔁 Step 1: Clone the Repository
+
+Start by cloning the repository to your local machine:
+
+```bash
+git clone https://github.com/ACADLab/TPU_Gen.git
+cd TPU_Gen
+```
+
+---
+
+### 🐍 Step 2: Create and Activate Conda Environment
+
+We recommend using a Conda environment to manage dependencies cleanly:
+
+```bash
+conda create -n tpu_gen_env python=3.10 -y
+conda activate tpu_gen_env
+```
+
+---
+
+### 📦 Step 3: Install Required Python Dependencies
+
+Install all required libraries using the provided `requirements.txt` file:
+
+```bash
+pip install -r requirements.txt
+```
+
+> ✅ If any versions in `requirements.txt` are outdated, feel free to upgrade them manually using `pip install --upgrade`.
+
+---
+
+### 💬 Step 4: Format the Input Prompt
+
+Use our prompt template to generate a well-structured input for the LLM:
+
+```text
+Generate Verilog header file based on the following description and metrics:
+Description: This is the Verilog Header file that contains the design of 4x4 systolic array implementation. It contains the following BAM approximate multiplier, with the following LZTA approximate adder. It has the support of the following 32 dataflow as input, and supports input weights 7 bits of integer. With a low precision multiplier coefficient of 2 employed in this device.
+Metrics: Area: 95194, WNS: -55.212, Total Power: 1.36e-02
+```
+
+This prompt format ensures that the model receives all necessary context for code generation.
+
+---
+
+### 🧠 Step 5: Train the Model (Optional)
+
+You can fine-tune one of our supported LLMs (e.g., CodeLlama-7B, CodeQwen1.5-7B, StarCoder2-7B) on our curated dataset.
+
+#### Dataset Versions Provided:
+
+* `train.json` / `test.json`: Full version for high-resource systems.
+* `beta_train.json` / `beta_test.json`: Smaller version for limited-resource setups.
+
+> The data is already preprocessed and structured in the required format. Simply plug it into your training loop.
+
+---
+
+### 🏗️ Step 6: Run Inference
+
+Once trained, run inference using a prompt like the one above. The model should generate a structured Verilog header output like:
+
+```verilog
+`define DRUM_APTPU //APMUL
+`define ROUN_WIDTH 1
+`define NIBBLE_WIDTH 4
+`define DW 16
+`define WW 5
+`define M 6
+`define N 6
+`define MULT_DW 8
+`define ADDER_PARAM 16
+`define VBL 16
+`define MHERLOA  //APADDER
+`ifdef NORMAL_TPU
+    `define ACCURATE_ACCUMULATE
+`endif
+```
+
+This is a partial configuration file describing a custom TPU design.
+
+---
+
+### 🔗 Step 7: Pass Output to RAG Pipeline
+
+Feed the generated Verilog header file into the RAG (Retrieval-Augmented Generation) pipeline:
+
+#### What the RAG Pipeline Does:
+
+1. **Converts** the output into a `.vh` file.
+2. **Identifies** both default and non-default modules.
+3. **Matches** module names against our complete RTL design repository.
+4. **Fetches** the required `.v` files.
+5. **Builds** the complete final design inside `final.vh/`.
+
+---
+
+### ✅ Step 8: Design Validation
+
+Once your full design is assembled:
+
+* You can run **simulation or synthesis** using tools like ModelSim, Vivado, or Yosys.
+* If errors are found, modify the prompt or fine-tune the model further and **re-run the pipeline**.
+
+---
+
+This completes the **TPU-Gen end-to-end flow**: from input prompt to validated Verilog design.
+
+> 📘 For more details, refer to our paper: [TPU-Gen on arXiv](https://arxiv.org/pdf/2503.05951)
+
+
+---
+
+### 🧰 Hardware Requirements
+
+To reproduce the full training pipeline, we recommend the following setup:
+
+* ✅ **GPU**: 4× NVIDIA A100 (80 GB each)
+* ✅ **VRAM**: Minimum 80 GB per GPU (for full dataset training)
+* ✅ **RAM**: At least 128 GB system memory
+* ✅ **Storage**: Minimum 300 GB free (for datasets, checkpoints, and model weights)
+* ✅ **CUDA**: Compatible with PyTorch ≥ 2.0 (CUDA 11.8 or newer)
+
+> ⚠️ **Note**: If you have limited resources, use our `beta_train.json` and `beta_test.json` datasets. These are designed for training on single-GPU or lower-memory environments.
+
+---
+
+
