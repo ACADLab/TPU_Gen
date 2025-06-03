@@ -23,10 +23,6 @@ It consists of:
 
 4. Automated design validation and PPA reporting.
 
-# Framework:
-
-<img width="712" alt="Framework" src="https://github.com/user-attachments/assets/b357482f-a1f4-4af8-96b1-ea663593c258" />
-
 ### 📌 Motivation
 
 Designing a **custom Tensor Processing Unit (TPU)** typically requires extensive hardware expertise and manual RTL development, which is:
@@ -65,4 +61,7 @@ With the rise of **Large Language Models (LLMs)**, there's an opportunity to **a
 - Outputs: **Power**, **Area**, **Delay**
 
 ---
+# Framework:
+
+<img width="712" alt="Framework" src="https://github.com/user-attachments/assets/b357482f-a1f4-4af8-96b1-ea663593c258" />
 
