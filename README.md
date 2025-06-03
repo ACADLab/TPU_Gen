@@ -65,3 +65,28 @@ With the rise of **Large Language Models (LLMs)**, there's an opportunity to **a
 
 <img width="712" alt="Framework" src="https://github.com/user-attachments/assets/b357482f-a1f4-4af8-96b1-ea663593c258" />
 
+
+### 🧪 Supported CNN Models
+
+The framework has been evaluated on several convolutional neural networks, showing generality and scalability:
+
+- **LeNet** – Small, shallow network
+- **ResNet18** – Medium complexity
+- **ResNet56** – Deep residual model
+- **VGG16** – Large, parameter-heavy CNN
+
+Each model was mapped to a corresponding systolic array design using textual descriptions, which were then successfully synthesized and laid out using TPU-Gen.
+
+---
+
+### 💡 Summary
+
+TPU-Gen is the **first open-source framework** to enable:
+
+- Natural language → Verilog generation
+- LLM + RAG-based design validation
+- RTL → GDS flow for real-world synthesis
+- Automated PPA evaluation across DNN workloads
+
+This positions TPU-Gen as a critical tool for hardware researchers, ML system designers, and EDA practitioners aiming to rapidly prototype and benchmark new accelerator designs.
+
