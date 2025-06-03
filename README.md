@@ -110,3 +110,25 @@ This positions TPU-Gen as a critical tool for hardware researchers, ML system de
 or
 
 🔗 [View on ICLAD Conference Website](https://iclad.ai/accepted-papers)
+
+---
+
+## 📄 Citation
+
+If you use TPU-Gen in your research, please cite the following paper:
+
+> **TPU-Gen: LLM-Driven Custom Tensor Processing Unit Generator**  
+> Deepak Vungarala, Mohammed Elbtity, Kartik Pandit, Sumiya Syed, Sakila Alam, Arnob Ghosh, Ramtin Zand, Shaahin Angizi  
+> *International Conference on Learning and Design Automation (ICLAD), 2025*
+
+📄 [Read on arXiv](https://arxiv.org/abs/2503.05951)
+
+```bibtex
+@inproceedings{vungarala2025tpugen,
+  title     = {TPU-Gen: LLM-Driven Custom Tensor Processing Unit Generator},
+  author    = {Vungarala, Deepak and Elbtity, Mohammed and Syed, Sumiya and Alam, Sakila and Pandit, Kartik and Ghosh, Arnob and Zand, Ramtin and Angizi, Shaahin},
+  booktitle = {Proceedings of the International Conference on Learning and Design Automation (ICLAD)},
+  year      = {2025},
+  url       = {https://arxiv.org/abs/2503.05951}
+}
+
