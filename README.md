@@ -78,6 +78,17 @@ The framework has been evaluated on several convolutional neural networks, showi
 Each model was mapped to a corresponding systolic array design using textual descriptions, which were then successfully synthesized and laid out using TPU-Gen.
 
 ---
+# Benchmark Results:
+
+| Architecture | Design Size | Power (W) | Area (µm²) | Delay (ns) | Outperforms Handcrafted |
+|--------------|--------------|-----------|-------------|-------------|---------------------------|
+| LeNet        | 4×4 INT8     | 0.036     | 32208       | 2.51        | ✅                        |
+| ResNet18     | 8×8 INT8     | 0.158     | 56795       | 2.84        | ✅                        |
+| ResNet56     | 16×16 INT8   | 0.631     | 193348      | 3.08        | ✅                        |
+| VGG16        | 32×32 INT8   | 2.412     | 737172      | 3.38        | ✅                        |
+
+> All synthesized using Yosys + OpenROAD on the Nangate45 library.
+
 
 ### 💡 Summary
 
