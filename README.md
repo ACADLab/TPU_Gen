@@ -19,3 +19,5 @@ Prompt generation from user input
 LLMs enhanced with multi-shot learning
 RAG module for dependency fetching
 Automated design validation and PPA reporting
+<img width="712" alt="Framework" src="https://github.com/user-attachments/assets/ccfac520-fff2-4fc3-bfa9-fc2c0a0d3a88" />
+
